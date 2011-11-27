@@ -62,7 +62,7 @@ def listPage(url):
             title = title[0].encode("utf-8")
         except:
             title = "No title"
-        RE_ID = 'jpg-s/(\d*)_2.jpg'
+        RE_ID = 'jpg-s/(\d*)_\d.jpg'
         RE_ID_obj = re.compile(RE_ID, re.IGNORECASE)
         url = RE_ID_obj.sub(r"mp4/\g<1>.mp4?start=0", thumb)
         listitem=xbmcgui.ListItem(title, iconImage="DefaultFolder.png", thumbnailImage=thumb)
